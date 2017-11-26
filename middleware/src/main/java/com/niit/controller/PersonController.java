@@ -22,7 +22,7 @@ public class PersonController
 		System.out.println("CREATING INSTANCE FOR PERSONCONTROLLER");
 	}
 	
-	@RequestMapping(value="/getallpersons")
+	@RequestMapping(value="/getallpersons",method=RequestMethod.GET)
 	//@ResponseBody - Data conversion
 	//@ResponseBody - convert list of Java objects to array of JSON 
 	public @ResponseBody List<Person> getAllPersons()
@@ -34,10 +34,10 @@ public class PersonController
 	//output - java to JSON conversion [add data to the body of the response]
 	//input - JSON to java [ Http Request body]
 	//{'id':0,'firstname':}
-	/*@RequestMapping(value="/saveperson",method=RequestMethod.POST)
+	@RequestMapping(value="/saveperson",method=RequestMethod.POST)
 	public @ResponseBody Person savePerson(@RequestBody Person person)
 	{
 		personDAO.savePerson(person);
 		return person;
-	}*/
+	}
 }
