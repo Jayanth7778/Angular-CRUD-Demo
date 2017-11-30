@@ -30,7 +30,6 @@ public class DBConfiguration
 		hibernateProperties.setProperty("hibernate.show_sql", "true");
 		lsf.addProperties(hibernateProperties);
 		
-		@SuppressWarnings("rawtypes")
 		Class classes[]=new Class[]{Person.class};
 	    return lsf.addAnnotatedClasses(classes).buildSessionFactory();
 	}
