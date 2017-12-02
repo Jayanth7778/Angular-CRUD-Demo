@@ -1,1 +1,7 @@
-com\niit\backend\App.class
+com\niit\dao\PersonDAOImpl.class
+com\niit\configuration\DBConfiguration.class
+com\niit\dao\PersonDAO.class
+com\niit\configuration\WebAppInitializer.class
+com\niit\configuration\WebConfig.class
+com\niit\model\Person.class
+com\niit\model\ErrorClazz.class
