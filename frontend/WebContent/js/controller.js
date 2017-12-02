@@ -4,7 +4,7 @@
 
 app.controller('PersonCtrl',function($scope,PersonService){
 	function getAllPersons(){
-	$scope.persons=PersonService.getAllPersons().then(function(response){
+	PersonService.getAllPersons().then(function(response){
 		$scope.persons=response.data
 		console.log('STATUS CODE IS ' + response.status)
 		console.log('DATA IS ' + response.data)
@@ -26,5 +26,21 @@ app.controller('PersonCtrl',function($scope,PersonService){
 			console.log(response.status)
 		})
 	}
+    
+	$scope.deletePerson=function(id){
+		PersonService.deletePerson(id).then(function(response){
+			$scope.persons=response.data;
+			console.log(response.status)
+		},function(response){
+			console.log(response.status)
+			console.log(response.data)
+			alert(response.data.message)
+			$scope.error=response.data
+		})
+	}
+	
 	getAllPersons()
 })
+
+
+
