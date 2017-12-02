@@ -24,12 +24,20 @@ public class PersonDAOImpl implements PersonDAO
 	{
 		Session session=sessionFactory.getCurrentSession();
 		Query query=session.createQuery("from Person");//select * from person
+		
 		return query.list();
 	}
 	public void savePerson(Person person) 
 	{
 		Session session=sessionFactory.getCurrentSession();
 		session.save(person);
+	}
+	
+	public void deletePerson(int id)
+	{
+		Session session=sessionFactory.getCurrentSession();
+		Person person=(Person)session.get(Person.class, id);
+		session.delete(person);
 	}
 
 }
