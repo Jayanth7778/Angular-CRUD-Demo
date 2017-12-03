@@ -9,5 +9,8 @@ public interface PersonDAO
 	List<Person> getAllPersons();
 	void savePerson(Person person);
 	void deletePerson(int id);
+	Person getPerson(int id);
+	void updatePerson(Person person);
+
 
 }
