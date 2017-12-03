@@ -13,5 +13,13 @@ app.config(function($routeProvider){
 		templateUrl:'personform.html',
 		controller:'PersonCtrl'
 	})
+	.when('/employees',{
+		templateUrl:'employees.html',
+		controller:'EmployeeCtrl'
+	})
+	.when('/getperson/:id',{
+		templateUrl:'personform.html',
+		controller:'EditPersonController'
+	})
 	.otherwise({templateUrl:'home.html'})
 })

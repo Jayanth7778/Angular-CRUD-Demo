@@ -1,13 +1,18 @@
 <div>
-<form>
 <pre>
+<form>
+
 Enter Firstname : <input type="text" ng-model="person.firstname">
 Enter lastname : <input type="text" ng-model="person.lastname">
 Enter Email: <input type="text" ng-model="person.email">
 Enter phonenumber: <input type="text" ng-model="person.phonenumber">
+<div ng-if="!person.id">
 <button ng-click="savePerson()">Save Person</button>
-</pre>
+</div>
+<div ng-if="person.id">
+<button ng-click="updatePerson()">Update Person</button>
+</div>
 </form>
+</pre>
 {{result}}
-<div ng-include="'persons.html'"></div>
 </div>

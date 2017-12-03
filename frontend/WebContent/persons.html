@@ -1,5 +1,5 @@
 <div>
-		<table>
+		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -17,10 +17,12 @@
 					<td>{{p.lastname}}</td>
 					<td>{{p.email}}</td>
 					<td>{{p.phonenumber}}</td>
-					<td><a ng-click="deletePerson(451)"><span class="glyphicon glyphicon-trash"></span></a>
+					<td><a ng-click="deletePerson(p.id)"><span class="glyphicon glyphicon-trash"></span></a>
+					<a href="#/getperson/{{p.id}}"><span class="glyphicon glyphicon-pencil"></span></a>
+					</td>
 				</tr>
 			</tbody>
 
 		</table>
 		{{error.message}}
-			</div>
+</div>
